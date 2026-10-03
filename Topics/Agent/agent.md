@@ -27,7 +27,7 @@ dispatching, tool execution, and mid-run message queuing.
 
 - `state`: Read-only getter returning the current `AgentState` snapshot
   (`messages`, `systemPrompt`, `tools`, `model`, `thinkingLevel`,
-  `isStreaming`, `streamingMessage`, `pendingToolCalls`, `errorMessage`).
+  `isStreaming`, `streamingMessage`, `pendingToolCalls`, `errorMessage`). [[tools]]
 - `steeringMode`: Queue mode (`"one-at-a-time"` | `"all"`) determining
   how queued steering messages are drained.
 - `followUpMode`: Queue mode (`"one-at-a-time"` | `"all"`) determining
@@ -220,6 +220,7 @@ functional loop:
      - `turn_end`: captures assistant error messages if present.
    - Dispatches events sequentially to registered `listeners`, awaiting
      each subscriber handler before returning to `runAgentLoop`.
+   - [[agent-loop]]
 
 ## Event Processing & State Reduction (`processEvents`)
 
