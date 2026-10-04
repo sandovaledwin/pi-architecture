@@ -4,7 +4,7 @@ The `harness/tools` directory (`packages/agent/src/harness/tools`)
 provides built-in tools for agent execution environments. Unlike core
 `AgentTool` definitions, these tools are implemented as
 `AgentHarnessTool` instances that require an `ExecutionEnv` (such as
-`NodeExecutionEnv`) to access the filesystem and shell.
+`NodeExecutionEnv`) to access the filesystem and shell [[env]].
 
 ## Architecture Diagram
 
