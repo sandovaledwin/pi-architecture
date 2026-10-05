@@ -1,7 +1,7 @@
 # AgentHarness Lifecycle & Instantiation
 
 `AgentHarness` (`@earendil-works/pi-agent-core`) is the multi-lane, durable
-runtime supervisor. It orchestrates shared resources (`Session` storage,
+runtime supervisor. It orchestrates shared resources ([[session]] storage,
 `Models`, `ExecutionEnv`, hooks, and telemetry) across isolated execution
 lines (`AgentLane`).
 
@@ -73,7 +73,8 @@ lines (`AgentLane`).
   without automatically driving them.
 
 ### 2. Lane Acquisition
-- **Invocation**: `harness.lane(name, options?, context)`
+- **Invocation**: `harness.lane(name, options?, context)`.
+- Review [[runtime]] lane build process.
 - **When**: Called when a client, subagent, or user initiates a task.
 - **Action**: Atomically gets an existing lane or initializes a new
   durable branch execution line.

@@ -76,7 +76,8 @@ state projection.
 - **Pass Driving**: `drive(options, context)` installs a pass owner and
   executes operations until settlement or a durable wait state.
 - **Structural Operations**: Coordinates in-band compaction and
-  branch tree navigation (`compact()`, `navigateTree()`).
+  branch tree navigation (`compact()`, `navigateTree()`). 
+- Review [[compaction]] process.
 - **Cooperative Cancellation**: `requestAbort(operationId, context)`
   signals running operations and commits cancellation records.
 - **Live Inspection**: `inspectExecution(context)` returns real-time
@@ -94,6 +95,7 @@ specialized procedures:
 - `recovery.ts`: Re-attaches to in-flight assistant generations on reboot.
 - `reconcile.ts`: Handles cancelled or interrupted operations cleanly.
 - `retry.ts`: Manages exponential backoff delays for transient errors.
+- Review [[execution]] process.
 
 ### 4. `reducer.ts` (`reduceLaneSnapshot`)
 - **Pure Functional Reducer**: Transforms incoming `HarnessEvent`s and a
